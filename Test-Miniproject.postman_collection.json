@@ -1,0 +1,460 @@
+{
+	"info": {
+		"_postman_id": "ca15a9ed-807c-4621-bb8e-47935962158a",
+		"name": "Test-Miniproject",
+		"description": "Build REST API with Laravel 8 using JWT Token\r\n\r\nIn this tutorial we will learn how to Build REST API with Laravel 8 using JWT Token (Json Web Token) from scratch. I’m sure after this topic you will be able to create a Rest API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25545005"
+	},
+	"item": [
+		{
+			"name": "Register New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"SATRIA MUNLOOP\",\r\n    \"email\": \"munlopp@gmail.com\",\r\n    \"password\": \"munlopp\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"enggit\",\r\n    \"email\": \"enggit@gmail.com\",\r\n    \"password\": \"enggit123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODIzNzA4OSwiZXhwIjoxNzA4MjQwNjg5LCJuYmYiOjE3MDgyMzcwODksImp0aSI6IjBQSk81S1BiY1dIOWZGbGkiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.u9GyokvsO0keU8MYPT04g-Zak9jLHIaqv8YenKS-OIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"munlopp@gmail.com\",\r\n    \"password\": \"munlopp\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI2MTQzOCwiZXhwIjoxNzA4MjY1MDM4LCJuYmYiOjE3MDgyNjE0MzgsImp0aSI6InhqeWJVT2tYR0RrY1UzOXkiLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vYt6mLZiaSMIOobphhez27cdtwjgU5k6MtGOkQpMpsY\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI1NjYxMywiZXhwIjoxNzA4MjYwMjEzLCJuYmYiOjE3MDgyNTY2MTMsImp0aSI6ImJtOWFRZE52ZmZzRVRZMVciLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.PXVpNd0JVUZORCrwONNIsgKTA9uG5_AIvJt2XZo7R-c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbHZ0ZXN0LmF2ZGVtb3NpdGVzLmNvbVwvYXBpXC9sb2dpbiIsImlhdCI6MTYwMDY5MTA3OCwiZXhwIjoxNjAwNjk0Njc4LCJuYmYiOjE2MDA2OTEwNzgsImp0aSI6Ik5XVm5XdjdjanE2NlJmanIiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.PJbyNcd-s3nG1mnu5z3mjlHM77snLpl05w720k5mZCE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_user"
+					]
+				},
+				"description": "Get user by token"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllMahasiswa",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI2MTUxNSwiZXhwIjoxNzA4MjY1MTE1LCJuYmYiOjE3MDgyNjE1MTUsImp0aSI6IlZzYTVqdmFDcFBHeDM5aHMiLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.IO4tGByJrxKRU1U2yVjdIRljR3Le50uxX0xDapOQMWk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/mahasiswa",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mahasiswa"
+					]
+				},
+				"description": "Get all products"
+			},
+			"response": []
+		},
+		{
+			"name": "GetByNama",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI3MDAzMiwiZXhwIjoxNzA4MjczNjMyLCJuYmYiOjE3MDgyNzAwMzIsImp0aSI6Ikd5emhFZnlsbmxuYWs0T0ciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3zaUSHO2NQej3uD3lZGQ6Kj3eJyRDLzNuqLckK1vXMk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/mahasiswa/getbynama/Turner Mia",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mahasiswa",
+						"getbynama",
+						"Turner Mia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SerchByYMD",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI2MTU0MywiZXhwIjoxNzA4MjY1MTQzLCJuYmYiOjE3MDgyNjE1NDMsImp0aSI6Ik1FeEZjNUdEVkVKQXQ0MVciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.oTT-l6pKtaQnVZyhT6KLdNIKph06p0V5fKnwEOaq_AE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/mahasiswa/getbyymd/20230405",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mahasiswa",
+						"getbyymd",
+						"20230405"
+					]
+				},
+				"description": "Get all products"
+			},
+			"response": []
+		},
+		{
+			"name": "serchByNim",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI2MTU0MywiZXhwIjoxNzA4MjY1MTQzLCJuYmYiOjE3MDgyNjE1NDMsImp0aSI6Ik1FeEZjNUdEVkVKQXQ0MVciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.oTT-l6pKtaQnVZyhT6KLdNIKph06p0V5fKnwEOaq_AE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/mahasiswa/9352078461",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mahasiswa",
+						"9352078461"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateMahasiswa",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI2MTU0MywiZXhwIjoxNzA4MjY1MTQzLCJuYmYiOjE3MDgyNjE1NDMsImp0aSI6Ik1FeEZjNUdEVkVKQXQ0MVciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.oTT-l6pKtaQnVZyhT6KLdNIKph06p0V5fKnwEOaq_AE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\":\"Satria Munlopp\",\r\n    \"nim\":\"243912423\",\r\n    \"ymd\": \"20192432\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/mahasiswa",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mahasiswa"
+					]
+				},
+				"description": "Get all products"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateMahasiswa",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI2MTU0MywiZXhwIjoxNzA4MjY1MTQzLCJuYmYiOjE3MDgyNjE1NDMsImp0aSI6Ik1FeEZjNUdEVkVKQXQ0MVciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.oTT-l6pKtaQnVZyhT6KLdNIKph06p0V5fKnwEOaq_AE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\":\"Wawan gurinjay\",\r\n    \"nim\":\"234124223\",\r\n    \"ymd\": \"21231223\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/mahasiswa/update/425",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mahasiswa",
+						"update",
+						"425"
+					]
+				},
+				"description": "Get all products"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteMahasiswa",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI2MTU0MywiZXhwIjoxNzA4MjY1MTQzLCJuYmYiOjE3MDgyNjE1NDMsImp0aSI6Ik1FeEZjNUdEVkVKQXQ0MVciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.oTT-l6pKtaQnVZyhT6KLdNIKph06p0V5fKnwEOaq_AE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/mahasiswa/delete/425",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mahasiswa",
+						"delete",
+						"425"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
