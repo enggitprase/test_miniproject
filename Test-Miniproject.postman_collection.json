@@ -14,7 +14,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"SATRIA MUNLOOP\",\r\n    \"email\": \"munlopp@gmail.com\",\r\n    \"password\": \"munlopp\"\r\n}",
+					"raw": "{\r\n    \"name\": \"INDRAWAN123\",\r\n    \"email\": \"indrawan123@gmail.com\",\r\n    \"password\": \"indrawan\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -40,7 +40,7 @@
 			"response": []
 		},
 		{
-			"name": "http://127.0.0.1:8000/api/register",
+			"name": "register2",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -114,24 +114,22 @@
 			"response": []
 		},
 		{
-			"name": "Logout",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"name": "get_all_user",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI3MDAzMiwiZXhwIjoxNzA4MjczNjMyLCJuYmYiOjE3MDgyNzAwMzIsImp0aSI6Ikd5emhFZnlsbmxuYWs0T0ciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3zaUSHO2NQej3uD3lZGQ6Kj3eJyRDLzNuqLckK1vXMk",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI2MTQzOCwiZXhwIjoxNzA4MjY1MDM4LCJuYmYiOjE3MDgyNjE0MzgsImp0aSI6InhqeWJVT2tYR0RrY1UzOXkiLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vYt6mLZiaSMIOobphhez27cdtwjgU5k6MtGOkQpMpsY\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/logout",
+					"raw": "http://127.0.0.1:8000/api/get_all_user",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -142,7 +140,7 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"logout"
+						"get_all_user"
 					]
 				}
 			},
@@ -159,7 +157,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI1NjYxMywiZXhwIjoxNzA4MjYwMjEzLCJuYmYiOjE3MDgyNTY2MTMsImp0aSI6ImJtOWFRZE52ZmZzRVRZMVciLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.PXVpNd0JVUZORCrwONNIsgKTA9uG5_AIvJt2XZo7R-c",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI3MDAzMiwiZXhwIjoxNzA4MjczNjMyLCJuYmYiOjE3MDgyNzAwMzIsImp0aSI6Ikd5emhFZnlsbmxuYWs0T0ciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3zaUSHO2NQej3uD3lZGQ6Kj3eJyRDLzNuqLckK1vXMk",
 							"type": "string"
 						}
 					]
@@ -195,6 +193,118 @@
 			"response": []
 		},
 		{
+			"name": "UpdateUSer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI3MDAzMiwiZXhwIjoxNzA4MjczNjMyLCJuYmYiOjE3MDgyNzAwMzIsImp0aSI6Ikd5emhFZnlsbmxuYWs0T0ciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3zaUSHO2NQej3uD3lZGQ6Kj3eJyRDLzNuqLckK1vXMk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"enggitPRASETYO\",\r\n    \"email\": \"enggit@gmail.com\",\r\n    \"password\": \"enggit233\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/updateUserById/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updateUserById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI3MDAzMiwiZXhwIjoxNzA4MjczNjMyLCJuYmYiOjE3MDgyNzAwMzIsImp0aSI6Ikd5emhFZnlsbmxuYWs0T0ciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3zaUSHO2NQej3uD3lZGQ6Kj3eJyRDLzNuqLckK1vXMk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/deleteUser/7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"deleteUser",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI2MTQzOCwiZXhwIjoxNzA4MjY1MDM4LCJuYmYiOjE3MDgyNjE0MzgsImp0aSI6InhqeWJVT2tYR0RrY1UzOXkiLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vYt6mLZiaSMIOobphhez27cdtwjgU5k6MtGOkQpMpsY\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "GetAllMahasiswa",
 			"request": {
 				"auth": {
@@ -202,7 +312,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI2MTUxNSwiZXhwIjoxNzA4MjY1MTE1LCJuYmYiOjE3MDgyNjE1MTUsImp0aSI6IlZzYTVqdmFDcFBHeDM5aHMiLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.IO4tGByJrxKRU1U2yVjdIRljR3Le50uxX0xDapOQMWk",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI3MDAzMiwiZXhwIjoxNzA4MjczNjMyLCJuYmYiOjE3MDgyNzAwMzIsImp0aSI6Ikd5emhFZnlsbmxuYWs0T0ciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3zaUSHO2NQej3uD3lZGQ6Kj3eJyRDLzNuqLckK1vXMk",
 							"type": "string"
 						}
 					]
@@ -271,7 +381,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI2MTU0MywiZXhwIjoxNzA4MjY1MTQzLCJuYmYiOjE3MDgyNjE1NDMsImp0aSI6Ik1FeEZjNUdEVkVKQXQ0MVciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.oTT-l6pKtaQnVZyhT6KLdNIKph06p0V5fKnwEOaq_AE",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI3MDAzMiwiZXhwIjoxNzA4MjczNjMyLCJuYmYiOjE3MDgyNzAwMzIsImp0aSI6Ikd5emhFZnlsbmxuYWs0T0ciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3zaUSHO2NQej3uD3lZGQ6Kj3eJyRDLzNuqLckK1vXMk",
 							"type": "string"
 						}
 					]
@@ -307,7 +417,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI2MTU0MywiZXhwIjoxNzA4MjY1MTQzLCJuYmYiOjE3MDgyNjE1NDMsImp0aSI6Ik1FeEZjNUdEVkVKQXQ0MVciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.oTT-l6pKtaQnVZyhT6KLdNIKph06p0V5fKnwEOaq_AE",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI3MDAzMiwiZXhwIjoxNzA4MjczNjMyLCJuYmYiOjE3MDgyNzAwMzIsImp0aSI6Ikd5emhFZnlsbmxuYWs0T0ciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3zaUSHO2NQej3uD3lZGQ6Kj3eJyRDLzNuqLckK1vXMk",
 							"type": "string"
 						}
 					]
@@ -341,7 +451,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI2MTU0MywiZXhwIjoxNzA4MjY1MTQzLCJuYmYiOjE3MDgyNjE1NDMsImp0aSI6Ik1FeEZjNUdEVkVKQXQ0MVciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.oTT-l6pKtaQnVZyhT6KLdNIKph06p0V5fKnwEOaq_AE",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI3MDAzMiwiZXhwIjoxNzA4MjczNjMyLCJuYmYiOjE3MDgyNzAwMzIsImp0aSI6Ikd5emhFZnlsbmxuYWs0T0ciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3zaUSHO2NQej3uD3lZGQ6Kj3eJyRDLzNuqLckK1vXMk",
 							"type": "string"
 						}
 					]
@@ -384,7 +494,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI2MTU0MywiZXhwIjoxNzA4MjY1MTQzLCJuYmYiOjE3MDgyNjE1NDMsImp0aSI6Ik1FeEZjNUdEVkVKQXQ0MVciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.oTT-l6pKtaQnVZyhT6KLdNIKph06p0V5fKnwEOaq_AE",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcwODI3MDAzMiwiZXhwIjoxNzA4MjczNjMyLCJuYmYiOjE3MDgyNzAwMzIsImp0aSI6Ikd5emhFZnlsbmxuYWs0T0ciLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3zaUSHO2NQej3uD3lZGQ6Kj3eJyRDLzNuqLckK1vXMk",
 							"type": "string"
 						}
 					]
@@ -393,7 +503,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nama\":\"Wawan gurinjay\",\r\n    \"nim\":\"234124223\",\r\n    \"ymd\": \"21231223\"\r\n}",
+					"raw": "{\r\n    \"nama\":\"Wawan anjay gurinjay\",\r\n    \"nim\":\"234124223\",\r\n    \"ymd\": \"21231223\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -401,7 +511,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/mahasiswa/update/425",
+					"raw": "http://127.0.0.1:8000/api/mahasiswa/update/428",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -414,7 +524,7 @@
 						"api",
 						"mahasiswa",
 						"update",
-						"425"
+						"428"
 					]
 				},
 				"description": "Get all products"
