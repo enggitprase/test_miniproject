@@ -118,4 +118,45 @@ class ApiController extends Controller
  
         return response()->json(['user' => $user]);
     }
+    public function get_all_user()
+    {
+        $posts = user::get();
+        return $posts;
+    }
+    public function updateUserById(Request $request, user $user)
+    {
+       
+        $data = $request->only('name', 'email','password');
+        $validator = Validator::make($data, [
+            'name' => 'required|string',
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+       
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->messages()], 200);
+        }
+        
+        $user = $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password)
+           ]);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'data berhasil diupdate',
+            'data' => $user
+        ], Response::HTTP_OK);
+
+    }
+    public function deleteUser(user $user)
+    {
+        $user->delete();
+        
+        return response()->json([
+            'success' => true,
+            'message' => 'data berhasil didelete'
+        ], Response::HTTP_OK);
+    }
 }

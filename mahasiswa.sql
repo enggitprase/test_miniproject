@@ -1,0 +1,613 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Feb 18, 2024 at 04:36 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `mahasiswa`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `failed_jobs`
+--
+
+CREATE TABLE `failed_jobs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `uuid` varchar(255) NOT NULL,
+  `connection` text NOT NULL,
+  `queue` text NOT NULL,
+  `payload` longtext NOT NULL,
+  `exception` longtext NOT NULL,
+  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mahasiswas`
+--
+
+CREATE TABLE `mahasiswas` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `nim` bigint(100) DEFAULT NULL,
+  `ymd` int(11) DEFAULT NULL,
+  `created_at` date DEFAULT NULL,
+  `updated_at` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `mahasiswas`
+--
+
+INSERT INTO `mahasiswas` (`id`, `nama`, `nim`, `ymd`, `created_at`, `updated_at`) VALUES
+(1, 'Abigail Williams', 178453629, 20220803, NULL, NULL),
+(2, 'Adams Ava', 197485623, 20231122, NULL, NULL),
+(3, 'Adams Emma', 198267543, 20220407, NULL, NULL),
+(4, 'Adams Harper', 286157349, 20230918, NULL, NULL),
+(5, 'Adams Jackson', 316892475, 20221230, NULL, NULL),
+(6, 'Adams Liam', 382174956, 20230611, NULL, NULL),
+(7, 'Adams Lily', 382541967, 20220225, NULL, NULL),
+(8, 'Adams Mia', 457896312, 20230502, NULL, NULL),
+(9, 'Adams Noah', 471953286, 20221014, NULL, NULL),
+(10, 'Adams Olivia', 568371942, 20230327, NULL, NULL),
+(11, 'Adams Sophia', 847513692, 20220709, NULL, NULL),
+(12, 'Addison Morris', 973812546, 20230213, NULL, NULL),
+(13, 'Aiden Baker', 1065973248, 20220526, NULL, NULL),
+(14, 'Aiden Bell', 1073498256, 20231007, NULL, NULL),
+(15, 'Aiden Brooks', 1084279563, 20220119, NULL, NULL),
+(16, 'Aiden Cooper', 1098342576, 20230801, NULL, NULL),
+(17, 'Aiden Foster', 1098745632, 20221124, NULL, NULL),
+(18, 'Aiden Hayes', 1206485739, 20230405, NULL, NULL),
+(19, 'Aiden Murphy', 1209563748, 20220917, NULL, NULL),
+(20, 'Aiden Powell', 1209847653, 20231229, NULL, NULL),
+(21, 'Aiden Taylor', 1234567890, 20220610, NULL, NULL),
+(22, 'Aiden Turner', 1239708564, 20230123, NULL, NULL),
+(23, 'Alexander Cook', 1243567890, 20220806, NULL, NULL),
+(24, 'Amelia Murphy', 1245867039, 20231125, NULL, NULL),
+(25, 'Aria Sanders', 1298347650, 20220410, NULL, NULL),
+(26, 'Ava Adams', 1298745603, 20230921, NULL, NULL),
+(27, 'Ava Bell', 1309452786, 20221203, NULL, NULL),
+(28, 'Ava Brooks', 1345678902, 20230614, NULL, NULL),
+(29, 'Ava Campbell', 1347695820, 20220228, NULL, NULL),
+(30, 'Ava Foster', 1349752680, 20230505, NULL, NULL),
+(31, 'Ava Hayes', 1385076429, 20221017, NULL, NULL),
+(32, 'Ava Turner', 1492876053, 20230401, NULL, NULL),
+(33, 'Ava Wright', 1579864203, 20220922, NULL, NULL),
+(34, 'Baker Aiden', 1583942076, 20231202, NULL, NULL),
+(35, 'Baker Emma', 1586423097, 20220617, NULL, NULL),
+(36, 'Barnes Lucas', 1753094682, 20230130, NULL, NULL),
+(37, 'Barnes Sophia', 1769854023, 20220809, NULL, NULL),
+(38, 'Barnes Wyatt', 1789054326, 20231128, NULL, NULL),
+(39, 'Bell Aiden', 1803924567, 20220502, NULL, NULL),
+(40, 'Bell Ava', 1835096742, 20231011, NULL, NULL),
+(41, 'Bell Chloe', 1836947502, 20220304, NULL, NULL),
+(42, 'Bell Harper', 1837692450, 20230716, NULL, NULL),
+(43, 'Bell Jackson', 1845603729, 20221127, NULL, NULL),
+(44, 'Bell Liam', 1845726309, 20230410, NULL, NULL),
+(45, 'Bell Lily', 1857306942, 20220925, NULL, NULL),
+(46, 'Bell Noah', 1894725063, 20231205, NULL, NULL),
+(47, 'Bell Oliver', 1896753042, 20220620, NULL, NULL),
+(48, 'Bell Olivia', 1948276530, 20230203, NULL, NULL),
+(49, 'Bell Sophia', 1953862407, 20220713, NULL, NULL),
+(50, 'Benjamin Parker', 1984736052, 20231024, NULL, NULL),
+(51, 'Brooks Aiden', 1987654320, 20220507, NULL, NULL),
+(52, 'Brooks Ava', 2039485716, 20230110, NULL, NULL),
+(53, 'Brooks Chloe', 2047956831, 20220822, NULL, NULL),
+(54, 'Brooks Emma', 2049576183, 20231130, NULL, NULL),
+(55, 'Brooks Jackson', 2053748619, 20220415, NULL, NULL),
+(56, 'Brooks Lily', 2056781439, 20230928, NULL, NULL),
+(57, 'Brooks Noah', 2056783491, 20221210, NULL, NULL),
+(58, 'Brooks Oliver', 2083651947, 20230621, NULL, NULL),
+(59, 'Brooks Sophia', 2096431587, 20220214, NULL, NULL),
+(60, 'Bryant Ethan', 2103847659, 20230509, NULL, NULL),
+(61, 'Bryant Jackson', 2108943657, 20221022, NULL, NULL),
+(62, 'Bryant Liam', 2154038697, 20230305, NULL, NULL),
+(63, 'Campbell Ava', 2157349608, 20220718, NULL, NULL),
+(64, 'Campbell Harper', 2170983456, 20231211, NULL, NULL),
+(65, 'Campbell Liam', 2178605439, 20220624, NULL, NULL),
+(66, 'Campbell Mia', 2187349605, 20230207, NULL, NULL),
+(67, 'Campbell Sophia', 2190836745, 20220901, NULL, NULL),
+(68, 'Carter Evans', 2318945670, 20230413, NULL, NULL),
+(69, 'Carter Isabella', 2345678901, 20221102, NULL, NULL),
+(70, 'Carter Reed', 2346709185, 20230815, NULL, NULL),
+(71, 'Charlotte Morris', 2356047819, 20220510, NULL, NULL),
+(72, 'Charlotte Thompson', 2374801965, 20231027, NULL, NULL),
+(73, 'Chloe Bell', 2379845016, 20220308, NULL, NULL),
+(74, 'Chloe Brooks', 2385671094, 20230720, NULL, NULL),
+(75, 'Chloe Evans', 2398165740, 20221129, NULL, NULL),
+(76, 'Chloe Foster', 2401563987, 20230416, NULL, NULL),
+(77, 'Chloe Hayes', 2463987150, 20220904, NULL, NULL),
+(78, 'Chloe Murphy', 2493861507, 20231208, NULL, NULL),
+(79, 'Chloe Powell', 2507149863, 20220627, NULL, NULL),
+(80, 'Chloe Turner', 2510934786, 20230210, NULL, NULL),
+(81, 'Chloe Ward', 2546178093, 20220723, NULL, NULL),
+(82, 'Cole Lucas', 2563718904, 20231103, NULL, NULL),
+(83, 'Cole Mia', 2569438710, 20220420, NULL, NULL),
+(84, 'Collins Emily', 2604138795, 20230901, NULL, NULL),
+(85, 'Collins Mia', 2659781403, 20221213, NULL, NULL),
+(86, 'Cook Alexander', 2674309185, 20230630, NULL, NULL),
+(87, 'Cooper Aiden', 2730486159, 20220218, NULL, NULL),
+(88, 'Cooper Scarlett', 2761985043, 20230513, NULL, NULL),
+(89, 'Daniel Simmons', 2840651937, 20221030, NULL, NULL),
+(90, 'Davis Abigail', 2904736185, 20230312, NULL, NULL),
+(91, 'Davis Emma', 2938647015, 20220726, NULL, NULL),
+(92, 'Davis Harper', 2940538176, 20231214, NULL, NULL),
+(93, 'Davis Mia', 2941867530, 20220603, NULL, NULL),
+(94, 'Davis Noah', 2958046173, 20230115, NULL, NULL),
+(95, 'Davis Olivia', 2978046513, 20220806, NULL, NULL),
+(96, 'Davis Sophia', 2981756043, 20231125, NULL, NULL),
+(97, 'Elijah Fisher', 3018654729, 20220410, NULL, NULL),
+(98, 'Elijah Hill', 3058726149, 20230921, NULL, NULL),
+(99, 'Emily Collins', 3084765921, 20221203, NULL, NULL),
+(100, 'Emma Adams', 3089176542, 20230614, NULL, NULL),
+(101, 'Emma Baker', 3185649072, 20220228, NULL, NULL),
+(102, 'Emma Brooks', 3198456027, 20230505, NULL, NULL),
+(103, 'Emma Davis', 3209461857, 20221017, NULL, NULL),
+(104, 'Emma Foster', 3245678901, 20230401, NULL, NULL),
+(105, 'Emma Griffin', 3246981075, 20220922, NULL, NULL),
+(106, 'Emma Hayes', 3247085961, 20231202, NULL, NULL),
+(107, 'Emma Hill', 3421560987, 20220617, NULL, NULL),
+(108, 'Emma Mitchell', 3451876920, 20230130, NULL, NULL),
+(109, 'Emma Nelson', 3456078129, 20220809, NULL, NULL),
+(110, 'Emma Thompson', 3456789012, 20231128, NULL, NULL),
+(111, 'Emma Turner', 3456921807, 20220502, NULL, NULL),
+(112, 'Ethan Bryant', 3458612970, 20231011, NULL, NULL),
+(113, 'Ethan Foster', 3472896150, 20220304, NULL, NULL),
+(114, 'Ethan Hayes', 3489601275, 20230716, NULL, NULL),
+(115, 'Ethan Mitchell', 3498756012, 20221127, NULL, NULL),
+(116, 'Ethan Murphy', 3510782496, 20230410, NULL, NULL),
+(117, 'Ethan Price', 3510928746, 20220925, NULL, NULL),
+(118, 'Ethan Russell', 3548692170, 20231205, NULL, NULL),
+(119, 'Ethan Turner', 3567812094, 20220620, NULL, NULL),
+(120, 'Evans Carter', 3591820476, 20230203, NULL, NULL),
+(121, 'Evans Chloe', 3620198745, 20220713, NULL, NULL),
+(122, 'Evans Liam', 3640875129, 20231024, NULL, NULL),
+(123, 'Evans Mia', 3648715029, 20220507, NULL, NULL),
+(124, 'Evans Penelope', 3650129847, 20230110, NULL, NULL),
+(125, 'Evans Sophia', 3675812049, 20220822, NULL, NULL),
+(126, 'Evelyn Price', 3702649185, 20231130, NULL, NULL),
+(127, 'Fisher Elijah', 3762109548, 20220415, NULL, NULL),
+(128, 'Fisher Jackson', 3817462059, 20230928, NULL, NULL),
+(129, 'Fisher Sophia', 3819476052, 20221210, NULL, NULL),
+(130, 'Fisher Zoe', 3824657019, 20230621, NULL, NULL),
+(131, 'Foster Aiden', 3850976142, 20220214, NULL, NULL),
+(132, 'Foster Ava', 3851297640, 20230509, NULL, NULL),
+(133, 'Foster Chloe', 3852401967, 20221022, NULL, NULL),
+(134, 'Foster Emma', 3867520149, 20230305, NULL, NULL),
+(135, 'Foster Ethan', 3947802165, 20220718, NULL, NULL),
+(136, 'Foster Grace', 3962478015, 20231211, NULL, NULL),
+(137, 'Foster Harper', 4021567893, 20220624, NULL, NULL),
+(138, 'Foster Isabella', 4037692185, 20230207, NULL, NULL),
+(139, 'Foster Jackson', 4038765129, 20220901, NULL, NULL),
+(140, 'Foster Liam', 4107892536, 20230413, NULL, NULL),
+(141, 'Foster Lily', 4130982576, 20221102, NULL, NULL),
+(142, 'Foster Mia', 4132578906, 20230815, NULL, NULL),
+(143, 'Foster Noah', 4132698075, 20220510, NULL, NULL),
+(144, 'Foster Oliver', 4158923076, 20231027, NULL, NULL),
+(145, 'Fox Noah', 4180572396, 20220308, NULL, NULL),
+(146, 'Gabriel Simmons', 4208651937, 20230720, NULL, NULL),
+(147, 'Grace Foster', 4290381657, 20221129, NULL, NULL),
+(148, 'Grace Hayes', 4298735106, 20230416, NULL, NULL),
+(149, 'Grace Morris', 4302981675, 20220904, NULL, NULL),
+(150, 'Grace Myers', 4385126790, 20231208, NULL, NULL),
+(151, 'Grace Richardson', 4508923671, 20231209, NULL, NULL),
+(152, 'Grace Scott', 4518923076, 20231210, NULL, NULL),
+(153, 'Grace Simmons', 4518927036, 20231211, NULL, NULL),
+(154, 'Grace Thompson', 4520968371, 20231212, NULL, NULL),
+(155, 'Grace Turner', 4523768109, 20231213, NULL, NULL),
+(156, 'Gray Samuel', 4562109873, 20231214, NULL, NULL),
+(157, 'Griffin Emma', 4567890123, 20231215, NULL, NULL),
+(158, 'Griffin Owen', 4569078123, 20231216, NULL, NULL),
+(159, 'Harper Adams', 4601897532, 20231217, NULL, NULL),
+(160, 'Harper Bell', 4607328159, 20231218, NULL, NULL),
+(161, 'Harper Campbell', 4609321785, 20231219, NULL, NULL),
+(162, 'Harper Davis', 4621587390, 20231220, NULL, NULL),
+(163, 'Harper Foster', 4650283197, 20231221, NULL, NULL),
+(164, 'Harper Hayes', 4671089253, 20231222, NULL, NULL),
+(165, 'Harper Hill', 4680917532, 20231223, NULL, NULL),
+(166, 'Harper Morris', 4689302517, 20231224, NULL, NULL),
+(167, 'Harper Parker', 4693210857, 20231225, NULL, NULL),
+(168, 'Harper Powell', 4701869325, 20231226, NULL, NULL),
+(169, 'Harper Scott', 4761209853, 20231227, NULL, NULL),
+(170, 'Harper Taylor', 4820165793, 20231228, NULL, NULL),
+(171, 'Harper Turner', 4827309165, 20231229, NULL, NULL),
+(172, 'Harper Ward', 4856130927, 20231230, NULL, NULL),
+(173, 'Harrison Mia', 4905128763, 20230115, NULL, NULL),
+(174, 'Hayes Aiden', 4908237615, 20220803, NULL, NULL),
+(175, 'Hayes Ava', 4910283765, 20231122, NULL, NULL),
+(176, 'Hayes Chloe', 4913562708, 20220407, NULL, NULL),
+(177, 'Hayes Emma', 4921368750, 20230918, NULL, NULL),
+(178, 'Hayes Ethan', 4923178650, 20221230, NULL, NULL),
+(179, 'Hayes Grace', 4925183670, 20230611, NULL, NULL),
+(180, 'Hayes Harper', 4927180563, 20220225, NULL, NULL),
+(181, 'Hayes Jackson', 4935678102, 20230502, NULL, NULL),
+(182, 'Hayes Liam', 4956873120, 20221014, NULL, NULL),
+(183, 'Hayes Lily', 4962831075, 20230327, NULL, NULL),
+(184, 'Hayes Mia', 5012376849, 20220709, NULL, NULL),
+(185, 'Hayes Noah', 5012893467, 20230213, NULL, NULL),
+(186, 'Hayes Oliver', 5019283476, 20220526, NULL, NULL),
+(187, 'Hayes Olivia', 5023146789, 20231007, NULL, NULL),
+(188, 'Hayes Sophia', 5026179348, 20220119, NULL, NULL),
+(189, 'Henderson Leo', 5031897462, 20230801, NULL, NULL),
+(190, 'Henry Ward', 5032987461, 20221124, NULL, NULL),
+(191, 'Hill Elijah', 5036487912, 20230405, NULL, NULL),
+(192, 'Hill Emma', 5067213984, 20220917, NULL, NULL),
+(193, 'Hill Harper', 5082913467, 20231229, NULL, NULL),
+(194, 'Hill Isabella', 5123786409, 20220610, NULL, NULL),
+(195, 'Holmes Olivia', 5139078462, 20230123, NULL, NULL),
+(196, 'Isabella Carter', 5140623978, 20220806, NULL, NULL),
+(197, 'Isabella Foster', 5170963842, 20231125, NULL, NULL),
+(198, 'Isabella Hill', 5182093467, 20220410, NULL, NULL),
+(199, 'Isabella Wright', 5182409673, 20230921, NULL, NULL),
+(200, 'Jackson Adams', 5189276304, 20221203, NULL, NULL),
+(201, 'Jackson Bell', 5196782403, 20230614, NULL, NULL),
+(202, 'Jackson Brooks', 5279631804, 20220228, NULL, NULL),
+(203, 'Jackson Bryant', 5281094736, 20230505, NULL, NULL),
+(204, 'Jackson Fisher', 5298760143, 20221017, NULL, NULL),
+(205, 'Jackson Foster', 5301974682, 20230401, NULL, NULL),
+(206, 'Jackson Hayes', 5362198740, 20220922, NULL, NULL),
+(207, 'Jackson Kelly', 5401987236, 20231202, NULL, NULL),
+(208, 'Jackson Murphy', 5420987136, 20220617, NULL, NULL),
+(209, 'Jackson Nelson', 5429703816, 20230130, NULL, NULL),
+(210, 'Jackson Scott', 5432768901, 20220809, NULL, NULL),
+(211, 'Jackson Stewart', 5462380791, 20231128, NULL, NULL),
+(212, 'Jackson Turner', 5607893412, 20220502, NULL, NULL),
+(213, 'Jackson Ward', 5620193847, 20231011, NULL, NULL),
+(214, 'Jackson Wright', 5649301872, 20220304, NULL, NULL),
+(215, 'James Lily', 5670318249, 20230716, NULL, NULL),
+(216, 'James Wright', 5672184903, 20221127, NULL, NULL),
+(217, 'Kelly Jackson', 5678123049, 20230410, NULL, NULL),
+(218, 'Leo Henderson', 5678901234, 20220925, NULL, NULL),
+(219, 'Liam Adams', 5712034986, 20231205, NULL, NULL),
+(220, 'Liam Bell', 5716943028, 20220620, NULL, NULL),
+(221, 'Liam Bryant', 5720368419, 20230203, NULL, NULL),
+(222, 'Liam Campbell', 5732048961, 20220713, NULL, NULL),
+(223, 'Liam Evans', 5742906138, 20231024, NULL, NULL),
+(224, 'Liam Foster', 5746192038, 20220507, NULL, NULL),
+(225, 'Liam Hayes', 5812034769, 20230110, NULL, NULL),
+(226, 'Liam Peterson', 5820743169, 20220822, NULL, NULL),
+(227, 'Liam Reed', 5823610947, 20231130, NULL, NULL),
+(228, 'Liam Turner', 5840319267, 20220415, NULL, NULL),
+(229, 'Liam Ward', 5863701924, 20230928, NULL, NULL),
+(230, 'Lily Adams', 5876312049, 20221210, NULL, NULL),
+(231, 'Lily Bell', 5876320149, 20230621, NULL, NULL),
+(232, 'Lily Brooks', 5912345678, 20220214, NULL, NULL),
+(233, 'Lily Foster', 5941086273, 20230509, NULL, NULL),
+(234, 'Lily Hayes', 5983421607, 20221022, NULL, NULL),
+(235, 'Lily James', 6071832945, 20230305, NULL, NULL),
+(236, 'Lily Thompson', 6083419257, 20220718, NULL, NULL),
+(237, 'Lily Turner', 6083741259, 20231211, NULL, NULL),
+(238, 'Lily Ward', 6089473125, 20220624, NULL, NULL),
+(239, 'Lucas Barnes', 6102934758, 20230207, NULL, NULL),
+(240, 'Lucas Cole', 6104729835, 20220901, NULL, NULL),
+(241, 'Lucas Parker', 6138740592, 20230413, NULL, NULL),
+(242, 'Lucas Taylor', 6172940358, 20221102, NULL, NULL),
+(243, 'Lucas Thompson', 6174903825, 20230815, NULL, NULL),
+(244, 'Lucas Turner', 6198432075, 20220510, NULL, NULL),
+(245, 'Lucas Ward', 6203154789, 20231027, NULL, NULL),
+(246, 'Madison Turner', 6219845037, 20220308, NULL, NULL),
+(247, 'Martinez Mason', 6279810453, 20230720, NULL, NULL),
+(248, 'Martinez Sophia', 6287395140, 20221129, NULL, NULL),
+(249, 'Mason Martinez', 6289475031, 20230416, NULL, NULL),
+(250, 'Mia Adams', 6309851472, 20220904, NULL, NULL),
+(251, 'Mia Campbell', 6318947025, 20231208, NULL, NULL),
+(252, 'Mia Cole', 6352789014, 20220627, NULL, NULL),
+(253, 'Mia Collins', 6370982145, 20230210, NULL, NULL),
+(254, 'Mia Davis', 6371502984, 20220723, NULL, NULL),
+(255, 'Mia Evans', 6415823907, 20231103, NULL, NULL),
+(256, 'Mia Foster', 6429085713, 20220420, NULL, NULL),
+(257, 'Mia Harrison', 6435901827, 20230901, NULL, NULL),
+(258, 'Mia Hayes', 6487302195, 20221213, NULL, NULL),
+(259, 'Mia Mitchell', 6508123479, 20230630, NULL, NULL),
+(260, 'Mia Murphy', 6571290834, 20220218, NULL, NULL),
+(261, 'Mia Parker', 6572081493, 20230513, NULL, NULL),
+(262, 'Mia Scott', 6572093841, 20221030, NULL, NULL),
+(263, 'Mia Turner', 6572301948, 20230312, NULL, NULL),
+(264, 'Mia Wallace', 6573201948, 20220726, NULL, NULL),
+(265, 'Mia Ward', 6720458193, 20231214, NULL, NULL),
+(266, 'Mitchell Emma', 6748103925, 20220603, NULL, NULL),
+(267, 'Mitchell Ethan', 6785430129, 20230115, NULL, NULL),
+(268, 'Mitchell Mia', 6789012345, 20220806, NULL, NULL),
+(269, 'Mitchell Oliver', 6789054321, 20231125, NULL, NULL),
+(270, 'Morris Addison', 6789450312, 20220410, NULL, NULL),
+(271, 'Morris Charlotte', 6792045183, 20230921, NULL, NULL),
+(272, 'Morris Grace', 6812405937, 20221203, NULL, NULL),
+(273, 'Morris Harper', 6815324907, 20230614, NULL, NULL),
+(274, 'Murphy Aiden', 6852301974, 20220228, NULL, NULL),
+(275, 'Murphy Amelia', 6871542093, 20230505, NULL, NULL),
+(276, 'Murphy Chloe', 6875309412, 20221017, NULL, NULL),
+(277, 'Murphy Ethan', 6890132457, 20230401, NULL, NULL),
+(278, 'Murphy Jackson', 6921083745, 20220922, NULL, NULL),
+(279, 'Murphy Mia', 6925840317, 20231202, NULL, NULL),
+(280, 'Murphy Oliver', 6931742058, 20220617, NULL, NULL),
+(281, 'Murphy Sophia', 6945280137, 20230130, NULL, NULL),
+(282, 'Myers Grace', 6947580123, 20220809, NULL, NULL),
+(283, 'Nelson Emma', 6947812503, 20231128, NULL, NULL),
+(284, 'Nelson Jackson', 6952378140, 20220502, NULL, NULL),
+(285, 'Nelson Noah', 6958231470, 20231011, NULL, NULL),
+(286, 'Nelson Oliver', 6970345182, 20220304, NULL, NULL),
+(287, 'Noah Adams', 6971283450, 20230716, NULL, NULL),
+(288, 'Noah Bell', 6973825140, 20221127, NULL, NULL),
+(289, 'Noah Brooks', 7042619835, 20230410, NULL, NULL),
+(290, 'Noah Davis', 7052398164, 20220925, NULL, NULL),
+(291, 'Noah Foster', 7065432189, 20231205, NULL, NULL),
+(292, 'Noah Fox', 7165039284, 20220620, NULL, NULL),
+(293, 'Noah Hayes', 7230814596, 20230203, NULL, NULL),
+(294, 'Noah Nelson', 7256043189, 20220713, NULL, NULL),
+(295, 'Noah Parker', 7264309815, 20231024, NULL, NULL),
+(296, 'Noah Richardson', 7265091348, 20220507, NULL, NULL),
+(297, 'Noah Taylor', 7280645139, 20230110, NULL, NULL),
+(298, 'Noah Turner', 7315086492, 20220822, NULL, NULL),
+(299, 'Oliver Bell', 7341602958, 20231130, NULL, NULL),
+(300, 'Oliver Brooks', 7392815046, 20220415, NULL, NULL),
+(301, 'Oliver Foster', 7420683519, 20230928, NULL, NULL),
+(302, 'Oliver Hayes', 7431502869, 20221210, NULL, NULL),
+(303, 'Oliver Mitchell', 7453201986, 20230621, NULL, NULL),
+(304, 'Oliver Murphy', 7492108365, 20220214, NULL, NULL),
+(305, 'Oliver Nelson', 7514869230, 20230509, NULL, NULL),
+(306, 'Oliver Powell', 7543012986, 20221022, NULL, NULL),
+(307, 'Oliver Scott', 7581029346, 20230305, NULL, NULL),
+(308, 'Oliver Thompson', 7609452318, 20220718, NULL, NULL),
+(309, 'Oliver Turner', 7632189045, 20231211, NULL, NULL),
+(310, 'Oliver Ward', 7635091248, 20220624, NULL, NULL),
+(311, 'Olivia Adams', 7649301285, 20230207, NULL, NULL),
+(312, 'Olivia Bell', 7650921834, 20220901, NULL, NULL),
+(313, 'Olivia Davis', 7652098413, 20230413, NULL, NULL),
+(314, 'Olivia Hayes', 7654109328, 20221102, NULL, NULL),
+(315, 'Olivia Holmes', 7654209318, 20230815, NULL, NULL),
+(316, 'Olivia Turner', 7684530219, 20220510, NULL, NULL),
+(317, 'Owen Griffin', 7690314285, 20231027, NULL, NULL),
+(318, 'Parker Benjamin', 7694012358, 20220308, NULL, NULL),
+(319, 'Parker Harper', 7816042395, 20230720, NULL, NULL),
+(320, 'Parker Lucas', 7834159620, 20221129, NULL, NULL),
+(321, 'Parker Mia', 7834506219, 20230416, NULL, NULL),
+(322, 'Parker Noah', 7890123456, 20220904, NULL, NULL),
+(323, 'Penelope Evans', 7893062514, 20231208, NULL, NULL),
+(324, 'Perry William', 7895246013, 20231209, NULL, NULL),
+(325, 'Peterson Liam', 7940862513, 20231210, NULL, NULL),
+(326, 'Powell Aiden', 7968435012, 20231211, NULL, NULL),
+(327, 'Powell Chloe', 7980651243, 20231212, NULL, NULL),
+(328, 'Powell Harper', 8013429657, 20231213, NULL, NULL),
+(329, 'Powell Oliver', 8045619372, 20231214, NULL, NULL),
+(330, 'Powell Sophia', 8053461927, 20231215, NULL, NULL),
+(331, 'Price Ethan', 8063152497, 20231216, NULL, NULL),
+(332, 'Price Evelyn', 8076159324, 20231217, NULL, NULL),
+(333, 'Reed Carter', 8102735469, 20231218, NULL, NULL),
+(334, 'Reed Liam', 8105962374, 20231219, NULL, NULL),
+(335, 'Reed Sophia', 8123456970, 20231220, NULL, NULL),
+(336, 'Reynolds Sophia', 8139562470, 20231221, NULL, NULL),
+(337, 'Richardson Grace', 8146570329, 20231222, NULL, NULL),
+(338, 'Richardson Noah', 8149036572, 20231223, NULL, NULL),
+(339, 'Richardson Scarlett', 8192435067, 20231224, NULL, NULL),
+(340, 'Rodriguez Zoey', 8193045672, 20231225, NULL, NULL),
+(341, 'Russell Ethan', 8231094765, 20231226, NULL, NULL),
+(342, 'Samuel Gray', 8235079614, 20231227, NULL, NULL),
+(343, 'Sanders Aria', 8302957461, 20231228, NULL, NULL),
+(344, 'Scarlett Cooper', 8304965172, 20231229, NULL, NULL),
+(345, 'Scarlett Richardson', 8309657142, 20231230, NULL, NULL),
+(346, 'Scott Grace', 8320194765, 20230115, NULL, NULL),
+(347, 'Scott Harper', 8327496150, 20220803, NULL, NULL),
+(348, 'Scott Jackson', 8346501927, 20231122, NULL, NULL),
+(349, 'Scott Mia', 8361924705, 20220407, NULL, NULL),
+(350, 'Scott Oliver', 8372164905, 20230918, NULL, NULL),
+(351, 'Sebastian Turner', 8407135629, 20221230, NULL, NULL),
+(352, 'Simmons Daniel', 8453012976, 20230611, NULL, NULL),
+(353, 'Simmons Gabriel', 8512679043, 20220225, NULL, NULL),
+(354, 'Simmons Grace', 8530126479, 20230502, NULL, NULL),
+(355, 'Sophia Adams', 8574912038, 20221014, NULL, NULL),
+(356, 'Sophia Barnes', 8619437052, 20230327, NULL, NULL),
+(357, 'Sophia Bell', 8650123479, 20220709, NULL, NULL),
+(358, 'Sophia Brooks', 8657132049, 20230213, NULL, NULL),
+(359, 'Sophia Campbell', 8714305962, 20220526, NULL, NULL),
+(360, 'Sophia Davis', 8723054619, 20231007, NULL, NULL),
+(361, 'Sophia Evans', 8745136902, 20220119, NULL, NULL),
+(362, 'Sophia Fisher', 8746023159, 20230801, NULL, NULL),
+(363, 'Sophia Hayes', 8746905231, 20221124, NULL, NULL),
+(364, 'Sophia Martinez', 8761043925, 20230405, NULL, NULL),
+(365, 'Sophia Murphy', 8761205349, 20220917, NULL, NULL),
+(366, 'Sophia Powell', 8762093415, 20231229, NULL, NULL),
+(367, 'Sophia Reed', 8762301954, 20220610, NULL, NULL),
+(368, 'Sophia Reynolds', 8764590123, 20230123, NULL, NULL),
+(369, 'Sophia Turner', 8901234567, 20220806, NULL, NULL),
+(370, 'Sophia Ward', 8901346725, 20231125, NULL, NULL),
+(371, 'Stella Wallace', 8901456327, 20220410, NULL, NULL),
+(372, 'Stewart Jackson', 8902734516, 20230921, NULL, NULL),
+(373, 'Taylor Aiden', 8906137452, 20221203, NULL, NULL),
+(374, 'Taylor Harper', 8950213647, 20230614, NULL, NULL),
+(375, 'Taylor Lucas', 9012345678, 20220228, NULL, NULL),
+(376, 'Taylor Noah', 9018372456, 20230505, NULL, NULL),
+(377, 'Thompson Charlotte', 9048763521, 20221017, NULL, NULL),
+(378, 'Thompson Emma', 9054382167, 20230401, NULL, NULL),
+(379, 'Thompson Grace', 9061782453, 20220922, NULL, NULL),
+(380, 'Thompson Lily', 9063478125, 20231202, NULL, NULL),
+(381, 'Thompson Lucas', 9078134526, 20220617, NULL, NULL),
+(382, 'Thompson Oliver', 9078654321, 20230130, NULL, NULL),
+(383, 'Turner Aiden', 9142058763, 20220809, NULL, NULL),
+(384, 'Turner Ava', 9142078365, 20231128, NULL, NULL),
+(385, 'Turner Chloe', 9182730654, 20220502, NULL, NULL),
+(386, 'Turner Emma', 9183654027, 20231011, NULL, NULL),
+(387, 'Turner Ethan', 9208453617, 20220304, NULL, NULL),
+(388, 'Turner Grace', 9260174583, 20230716, NULL, NULL),
+(389, 'Turner Harper', 9270651483, 20221127, NULL, NULL),
+(390, 'Turner Jackson', 9271805346, 20230410, NULL, NULL),
+(391, 'Turner Liam', 9304857162, 20220925, NULL, NULL),
+(392, 'Turner Lily', 9326751408, 20231205, NULL, NULL),
+(393, 'Turner Lucas', 9342016578, 20220620, NULL, NULL),
+(394, 'Turner Madison', 9342107865, 20230203, NULL, NULL),
+(395, 'Turner Mia', 9352078461, 20220713, NULL, NULL),
+(396, 'Turner Noah', 9378561204, 20231024, NULL, NULL),
+(397, 'Turner Oliver', 9384756201, 20220507, NULL, NULL),
+(398, 'Turner Olivia', 9456302718, 20230110, NULL, NULL),
+(399, 'Turner Sebastian', 9462170583, 20220822, NULL, NULL),
+(400, 'Turner Sophia', 9462813507, 20231130, NULL, NULL),
+(401, 'Wallace Mia', 9481073652, 20220415, NULL, NULL),
+(402, 'Wallace Stella', 9483561207, 20230928, NULL, NULL),
+(403, 'Ward Chloe', 9501764328, 20221210, NULL, NULL),
+(404, 'Ward Harper', 9518273640, 20230621, NULL, NULL),
+(405, 'Ward Henry', 9546872013, 20220214, NULL, NULL),
+(406, 'Ward Jackson', 9561738042, 20230509, NULL, NULL),
+(407, 'Ward Liam', 9652318740, 20221022, NULL, NULL),
+(408, 'Ward Lily', 9671058234, 20230305, NULL, NULL),
+(409, 'Ward Lucas', 9678325140, 20220718, NULL, NULL),
+(410, 'Ward Mia', 9736018245, 20231211, NULL, NULL),
+(411, 'Ward Oliver', 9765012342, 20220624, NULL, NULL),
+(412, 'Ward Sophia', 9765012348, 20230207, NULL, NULL),
+(413, 'William Perry', 9765032481, 20220901, NULL, NULL),
+(414, 'Williams Abigail', 9768054321, 20230413, NULL, NULL),
+(415, 'Wright Ava', 9812345076, 20221102, NULL, NULL),
+(416, 'Wright Isabella', 9817352406, 20230815, NULL, NULL),
+(417, 'Wright Jackson', 9817352409, 20220510, NULL, NULL),
+(418, 'Wright James', 9823456017, 20231027, NULL, NULL),
+(419, 'Wyatt Barnes', 9870452316, 20220308, NULL, NULL),
+(420, 'Zoe Fisher', 9876053121, 20230720, NULL, NULL),
+(421, 'Zoey Rodriguez', 9876053124, 20221129, NULL, NULL),
+(422, 'Wawan', 234124223, 21231223, '2024-02-18', '2024-02-18'),
+(425, 'Wawan gurinjay', 234124223, 21231223, '2024-02-18', '2024-02-18'),
+(426, 'Satria Munlopp', 243912423, 20192432, '2024-02-18', '2024-02-18'),
+(428, 'Satria Munlopp', 243912423, 20192432, '2024-02-18', '2024-02-18');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `migrations`
+--
+
+CREATE TABLE `migrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(255) NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `migrations`
+--
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(1, '2014_10_12_000000_create_users_table', 1),
+(2, '2014_10_12_100000_create_password_resets_table', 1),
+(3, '2019_08_19_000000_create_failed_jobs_table', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `password_resets`
+--
+
+CREATE TABLE `password_resets` (
+  `email` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `password` varchar(255) NOT NULL,
+  `remember_token` varchar(100) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'enggit', 'enggit@gmail.com', NULL, '$2y$10$2ZG.Tg73lAkUUx8WEQIzxeCA9iQtDn7ZX3kF8Vyu6Dy7t4aMN43sS', NULL, '2024-02-17 23:17:14', '2024-02-17 23:17:14'),
+(2, 'wawan', 'wawan@gmail.com', NULL, '$2y$10$faOKXN5htOudRfKVFG0erenCkm/1n6/zaJg2nAPr527mjSU8MfF7y', NULL, '2024-02-18 01:05:09', '2024-02-18 01:05:09'),
+(3, 'alexander wawanable', 'alex@gmail.com', NULL, '$2y$10$T.igZjTGAo1yyDZgGDuqGO3.sH33ttGFL.53mf.bLCiAV3Cn2Qf6m', NULL, '2024-02-18 01:09:19', '2024-02-18 01:09:19'),
+(4, 'SATRIA MUNLOOP', 'munlopp@gmail.com', NULL, '$2y$10$3IvrWUlTVur0BC9n92uZJu5MvLdgA8IPcstd6va6eqQF3wvLsNnwy', NULL, '2024-02-18 06:03:33', '2024-02-18 06:03:33');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `failed_jobs`
+--
+ALTER TABLE `failed_jobs`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indexes for table `mahasiswas`
+--
+ALTER TABLE `mahasiswas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `migrations`
+--
+ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `password_resets`
+--
+ALTER TABLE `password_resets`
+  ADD KEY `password_resets_email_index` (`email`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `users_email_unique` (`email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `failed_jobs`
+--
+ALTER TABLE `failed_jobs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `mahasiswas`
+--
+ALTER TABLE `mahasiswas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=429;
+
+--
+-- AUTO_INCREMENT for table `migrations`
+--
+ALTER TABLE `migrations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

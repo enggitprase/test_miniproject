@@ -11,6 +11,9 @@ Route::post('register', [ApiController::class, 'register']);
 Route::group(['middleware' => ['jwt.verify']], function() {
     Route::get('logout', [ApiController::class, 'logout']);
     Route::get('get_user', [ApiController::class, 'get_user']);
+    Route::get('get_all_user', [ApiController::class, 'get_all_user']);
+    Route::put('updateUserById/{user}', [ApiController::class, 'updateUserById']);
+    Route::delete('deleteUser/{user}', [ApiController::class, 'deleteUser']);
 
     Route::get('mahasiswa', 'App\Http\Controllers\ReadController@index');
     Route::get('mahasiswa/{nim}', 'App\Http\Controllers\ReadController@GetByNim');

@@ -40,15 +40,6 @@ class CreateController extends Controller
 
     public function updateById(Request $request, mahasiswa $mahasiswa)
     {
-        
-        $mahasiswa = mahasiswa::where('id','=',$mahasiswa )->get();
-    
-        if ($mahasiswa == '[]') { 
-            return response()->json([
-                'success' => false,
-                'message' => 'Sorry, nama not found.'
-            ], 400);
-       
         $data = $request->only('nama', 'nim','ymd');
         $validator = Validator::make($data, [
             'nama' => 'required|string',
@@ -60,7 +51,7 @@ class CreateController extends Controller
             return response()->json(['error' => $validator->messages()], 200);
         }
         
-        $mahasiswa = mahasiswa::where([
+        $mahasiswa = $mahasiswa->update([
             'nama' => $request->nama,
             'nim' => $request->nim,
             'ymd' => $request->ymd
@@ -73,7 +64,7 @@ class CreateController extends Controller
         ], Response::HTTP_OK);
 
     }
-}
+
 
     public function delete(mahasiswa $mahasiswa)
     {
